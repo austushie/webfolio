@@ -13,29 +13,44 @@ import profilePic from "../assets/profile.jpg";
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <div class="profile-section">
-        <div class="profile-image"></div>
-    </div>
+<nav class="nav-icons">
+    <a href="mailto:hello@sillyracoon.tech" class="nav-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+        </svg>
+    </a>
+</nav>
 
-    <div class="text-section">
-        <h1>Austin</h1>
-        <div class="subtitle">@ Silly Raccoon technologies</div>
-        <p class="description">
-            Hi! I'm an ICT student with a passion for programming, especially Java.
-            I love exploring system-level tech and microcontrollers.
-        </p>
-
-        <div class="skills">
-            <span class="skill">Java</span>
-            <span class="skill">Python</span>
-            <span class="skill">C</span>
-            <span class="skill">TypeScript</span>
-            <span class="skill">Linux</span>
+<main class="main-content">
+    <div class="content-container">
+        <div class="profile-section">
+            <div class="profile-image"></div>
         </div>
 
-        <a href="mailto:hello@sillyracoon.tech" class="contact-btn">Contact Me</a>
+        <div class="text-section">
+            <h1 class="main-title">Austin</h1>
+            <h2 class="subtitle">@ Silly Raccoon technologies</h2>
+            <p class="description">
+                Hi! I'm an ICT student with a passion for programming, especially Java.
+                I love exploring system-level tech, microcontrollers, and tinkering with electronics.
+            </p>
+
+            <div class="skills-section">
+                <div class="skill-tag">Java</div>
+                <div class="skill-tag">Python</div>
+                <div class="skill-tag">C</div>
+                <div class="skill-tag">TypeScript</div>
+                <div class="skill-tag">Linux</div>
+                <div class="skill-tag">Docker</div>
+            </div>
+
+            <div class="cta-section">
+                <a href="mailto:hello@sillyracoon.tech" class="cta-primary">Contact Me</a>
+                <a href="https://github.com/austushie" class="cta-secondary">View Work</a>
+            </div>
+        </div>
     </div>
-</div>
+</main>
 </body>
 </html>
