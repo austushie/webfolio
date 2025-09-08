@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import {Image} from "astro:assets";
 import "../assets/global.css";
 import profilePic from "../assets/profile.jpg";
 ---
@@ -7,17 +7,21 @@ import profilePic from "../assets/profile.jpg";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Austin's Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"/>
+
 </head>
+
 <body>
 <div class="background-grid"></div>
 
-<nav class="nav-icons">
-    <a href="mailto:hello@sillyracoon.tech" class="nav-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+<nav class="nav-icons" role="navigation" aria-label="Social links">
+    <a href="mailto:hello@sillyracoon.tech" class="nav-icon" aria-label="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
             <polyline points="22,6 12,13 2,6"/>
         </svg>
@@ -28,19 +32,17 @@ import profilePic from "../assets/profile.jpg";
     <div class="content-container">
         <div class="profile-section">
             <div class="profile-image-container">
-                <div class="profile-image">
-                    <Image
-                    src={profilePic}
-                    alt="Austin's Profile"
-                    class="profile-image"
-                    width={320}
-                    height={320}
-                    format="webp"
-                    quality={80}
-                    loading="eager"
-                    decoding="async"
-                    />
-                </div>
+                <Image
+                        src={profilePic}
+                        alt="Austin's Profile"
+                        class="profile-image"
+                        width={320}
+                        height={320}
+                        format="webp"
+                        quality={80}
+                        loading="eager"
+                        decoding="async"
+                />
                 <div class="profile-glow"></div>
             </div>
         </div>
@@ -51,8 +53,11 @@ import profilePic from "../assets/profile.jpg";
             </h1>
             <h2 class="subtitle">@ Silly Raccoon technologies</h2>
             <p class="description">
-                Hi! There might not be much to see here, but here's a quick intro... I'm an ICT student with a passion for programming, especially Java. I love exploring system-level tech, microcontrollers, and tinkering with electronics, and I hope to build a homelab one day to experiment with networks, servers, and more.
+                Hi! There might not be much to see here, but here’s a quick intro… I’m an ICT student with a passion for
+                programming, especially Java. I love exploring system-level tech, microcontrollers, and tinkering with
+                electronics. I hope to learn more about Networking in the near future.
             </p>
+
 
             <div class="skills-section">
                 <div class="skill-tag">Java</div>
@@ -66,19 +71,24 @@ import profilePic from "../assets/profile.jpg";
             <div class="cta-section">
                 <a href="mailto:hello@sillyracoon.tech" class="cta-primary">
                     Contact Me
-                    <svg class="cta-arrow" viewBox="0 0 24 24">
-                        <line x1="7" y1="17" x2="17" y2="7"></line>
-                        <polyline points="7,7 17,7 17,17"></polyline>
+                    <svg class="cta-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <line x1="7" y1="17" x2="17" y2="7"/>
+                        <polyline points="7,7 17,7 17,17"/>
                     </svg>
                 </a>
                 <a href="https://github.com/austushie" class="cta-secondary">View Work</a>
             </div>
         </div>
     </div>
+
 </main>
 
+<!-- Footer -->
 <footer class="footer">
-    <p>&copy; 2024 Silly Raccoon. Doing Derpy Things.</p>
+    <p>
+        &copy; 2024 Silly Raccoon. Doing Derpy Things.
+    </p>
 </footer>
+
 </body>
 </html>
